@@ -1,0 +1,18 @@
+{
+  "name": "event-management-system",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "concurrently \"cd backend && npm run build\" \"cd frontend && npm run build\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "install": "if-env TYPE=backend && (cd backend && npm install) || (cd frontend && npm install)"
+  },
+  "description": "",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
